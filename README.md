@@ -1,17 +1,46 @@
-# supabase_hackthon_app
+# gadget_gram_app
 
-A new Flutter project.
+## Development Environment
 
-## Getting Started
+### Flutter
 
-This project is a starting point for a Flutter application.
+- Android Studio or Visual Studio Code
+- Flutter 3.16.3
+- Dart 3.2.3
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### iOS
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# supabase_hackthon_app
+- Xcode 15.0.1
+- CocoaPods 1.11.3
+
+### Android
+
+- Android SDK version 33.0.0
+
+# Setup
+
+1、`git clone https://github.com/iseruuuuu/supabase_hackthon_app.git`  
+2、`make setup`
+
+
+# Contributing
+
+We always welcome all contributions! See CONTRIBUTING.md for more information.
+
+### Branch Rules
+
+We would be happy if you could create a branch with the following rules
+
+| branch prefix | label |
+| -- | -- |
+| `feature/*` | `feature` |
+| `fix/*`, `bugfix/*` | `bug` |
+| `improvement/*`, `improve/*`, `migrate/*` | `improve` |
+
+
+# Thanks
+
+Thank you for contributing!
+
+# gadget_gram_app
