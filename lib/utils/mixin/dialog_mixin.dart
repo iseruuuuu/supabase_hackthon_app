@@ -7,6 +7,7 @@ mixin DialogMixin {
     required Function() onTap,
     required String title,
     required String subTitle,
+    required String yes,
   }) {
     showDialog(
       context: context,
@@ -45,7 +46,6 @@ mixin DialogMixin {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        elevation: 5,
                         shape: const StadiumBorder(),
                       ),
                       onPressed: () => context.pop(),
@@ -55,7 +55,7 @@ mixin DialogMixin {
                           horizontal: 18,
                         ),
                         child: Text(
-                          'いいえ',
+                          'Cancel',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -66,20 +66,19 @@ mixin DialogMixin {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
-                        elevation: 5,
                         shape: const StadiumBorder(),
                       ),
                       onPressed: () {
                         context.pop();
                         onTap();
                       },
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.symmetric(
                           vertical: 16,
                           horizontal: 18,
                         ),
                         child: Text(
-                          'はい',
+                          yes,
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -121,7 +120,7 @@ mixin DialogMixin {
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 24),
                   child: Text(
-                    'ログアウトの確認',
+                    'Check Logout',
                     style: const TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -129,8 +128,7 @@ mixin DialogMixin {
                   ),
                 ),
                 Text(
-                  'ログアウトしますか?\n'
-                  'アカウントの状態は保存されています。',
+                  'Would you like to log out?\nYour account status has been saved.',
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 24),
@@ -140,7 +138,6 @@ mixin DialogMixin {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue,
-                        elevation: 5,
                         shape: const StadiumBorder(),
                       ),
                       onPressed: () => context.pop(),
@@ -150,7 +147,7 @@ mixin DialogMixin {
                           horizontal: 5,
                         ),
                         child: Text(
-                          'キャンセル',
+                          'Cancel',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
@@ -161,7 +158,6 @@ mixin DialogMixin {
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        elevation: 5,
                         shape: const StadiumBorder(),
                       ),
                       onPressed: () {
@@ -174,7 +170,7 @@ mixin DialogMixin {
                           horizontal: 5,
                         ),
                         child: Text(
-                          'ログアウト',
+                          'Logout',
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,

@@ -99,6 +99,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                                   title: 'Delete Post',
                                   subTitle: 'Do you want to delete this post?\n'
                                       'Once deleted, it cannot be restored.',
+                                  yes: 'Delete',
                                   onTap: () async {
                                     await ref
                                         .read(
@@ -110,19 +111,20 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                                       if (value) {
                                         context.pop(true);
                                       } else {
-                                        openSnackBar(context, '削除が失敗しました');
+                                        openSnackBar(context, 'Delete failed');
                                       }
                                     });
                                   },
                                 )
                               : openDialog(
                                   context: context,
-                                  title: '投稿の報告',
-                                  subTitle:
-                                      'この投稿について報告を行います。\n Googleフォームに遷移します。',
+                                  title: 'Report a Post',
+                                  subTitle: 'I will report about this post. '
+                                      '\nTransition to Google Form.',
+                                  yes: 'Report',
                                   onTap: () async {
                                     await launcherUrl(
-                                      'https://docs.google.com/forms/d/1uDNHpaPTNPK7tBjbfNW87ykYH3JZO0D2l10oBtVxaQA/edit',
+                                      'https://forms.gle/CqWX2tNVyDLptXJG9',
                                     ).then((value) {
                                       if (!value) {
                                         openErrorSnackBar(context);
