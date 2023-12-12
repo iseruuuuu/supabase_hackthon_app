@@ -45,7 +45,7 @@ class NewAccountScreen extends ConsumerWidget {
                   ),
                   Wrap(
                     children: List.generate(
-                      4,
+                      6,
                       (index) {
                         return AppIcon(
                           onTap: () => ref
