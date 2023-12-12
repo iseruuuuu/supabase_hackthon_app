@@ -72,7 +72,7 @@ class DatabaseService {
     required Uint8List imageBytes,
   }) async {
     await supabase.storage
-        .from('food')
+        .from('gadget')
         .uploadBinary('/$user/$uploadImage', imageBytes);
   }
 
