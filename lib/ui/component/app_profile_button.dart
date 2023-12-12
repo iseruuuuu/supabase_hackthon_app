@@ -5,12 +5,12 @@ import 'package:supabase_hackthon_app/utils/mixin/snack_bar_mixin.dart';
 class AppMyProfileButton extends StatelessWidget with SnackBarMixin {
   const AppMyProfileButton({
     required this.onTapEdit,
-    required this.onTapExchange,
+    required this.onTapShare,
     super.key,
   });
 
   final Function() onTapEdit;
-  final Function() onTapExchange;
+  final Function() onTapShare;
 
   @override
   Widget build(BuildContext context) {
@@ -18,16 +18,14 @@ class AppMyProfileButton extends StatelessWidget with SnackBarMixin {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         ProfileButton(
-          title: 'プロフィールを編集',
+          title: 'EDIT PROFILE',
           onTap: onTapEdit,
           icon: Icons.edit,
         ),
         ProfileButton(
-          title: 'ポイントを交換する',
-          onTap: () {
-            openComingSoonSnackBar(context);
-          },
-          icon: FontAwesomeIcons.coins,
+          title: 'SHARE PROFILE',
+          onTap: onTapShare,
+          icon: Icons.share,
         ),
       ],
     );

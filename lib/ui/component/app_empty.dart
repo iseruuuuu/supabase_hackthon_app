@@ -10,10 +10,10 @@ class AppEmpty extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            '投稿がありません',
+            'NO POST',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 20,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),

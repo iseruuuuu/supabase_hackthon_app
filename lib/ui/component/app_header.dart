@@ -43,7 +43,7 @@ class AppHeader extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '投稿',
+                    'POSTS',
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
