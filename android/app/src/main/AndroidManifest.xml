@@ -32,7 +32,7 @@
 
                 <data
                     android:host="login-callback"
-                    android:scheme="io.supabase.flutterquickstart" />
+                    android:scheme="io.supabase.flutterquickstarts" />
             </intent-filter>
 
         </activity>
