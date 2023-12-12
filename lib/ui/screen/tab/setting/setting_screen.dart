@@ -65,10 +65,7 @@ class SettingScreenState extends ConsumerState<SettingScreen>
                     },
                   ),
                   SettingsTile.navigation(
-                    leading: const Icon(
-                      Icons.account_balance_wallet_outlined,
-                      color: Colors.orange,
-                    ),
+                    leading: const Icon(Icons.account_balance_wallet_outlined),
                     title: const Text('License'),
                     onPressed: (context) {
                       context.pushNamed(RouterPath.license);

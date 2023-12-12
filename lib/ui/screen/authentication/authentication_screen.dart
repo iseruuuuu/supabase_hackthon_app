@@ -85,9 +85,10 @@ class AuthenticationScreenState extends ConsumerState<AuthenticationScreen>
                     children: [
                       Image.asset(
                         'assets/image/icon.png',
-                        width: 70,
-                        height: 70,
+                        width: 55,
+                        height: 55,
                       ),
+                      SizedBox(width: 10),
                       const Text(
                         'Gadget Gram',
                         style: TextStyle(
@@ -99,7 +100,7 @@ class AuthenticationScreenState extends ConsumerState<AuthenticationScreen>
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    padding: const EdgeInsets.symmetric(vertical: 40),
                     child: AppPostTextField(
                       controller: ref
                           .watch(authenticationViewModelProvider().notifier)
@@ -114,15 +115,13 @@ class AuthenticationScreenState extends ConsumerState<AuthenticationScreen>
                         .login,
                     title: 'Resister  /  Login',
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(40),
-                    child: Text(
-                      state.loginStatus,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                      ),
+                  SizedBox(height: 40),
+                  Text(
+                    state.loginStatus,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
                     ),
                   ),
                 ],
