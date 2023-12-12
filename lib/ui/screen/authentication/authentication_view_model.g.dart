@@ -7,7 +7,7 @@ part of 'authentication_view_model.dart';
 // **************************************************************************
 
 String _$authenticationViewModelHash() =>
-    r'49abd13db29831690385e104a548107ee6579c82';
+    r'f8e8bc056a78b201b436f548420e2a635434dc59';
 
 /// Copied from Dart SDK
 class _SystemHash {
