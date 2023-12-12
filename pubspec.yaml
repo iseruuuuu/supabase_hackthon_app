@@ -45,12 +45,11 @@ flutter_icons:
   android: true
   ios: true
   image_path: "assets/launcher_icon/icon.png"
-  adaptive_icon_background: "assets/launcher_icon/icon_adaptive_foreground.png"
-  adaptive_icon_foreground: "assets/launcher_icon/icon_adaptive_foreground.png"
+  adaptive_icon_background: "#ffffff"
+  adaptive_icon_foreground: "assets/launcher_icon/icon.png"
 
 flutter_native_splash:
   image: assets/splash/splash.png
-  color: '#ffffff'
   android: true
   ios: true
   fullscreen: true
