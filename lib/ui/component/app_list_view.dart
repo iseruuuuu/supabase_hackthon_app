@@ -78,8 +78,8 @@ class AppListView extends StatelessWidget {
                       color: Colors.white,
                       child: CachedNetworkImage(
                         imageUrl: supabase.storage
-                            .from('food')
-                            .getPublicUrl(data[index]['food_image']),
+                            .from('gadget')
+                            .getPublicUrl(data[index]['gadget_image']),
                         fit: BoxFit.cover,
                       ),
                     ),

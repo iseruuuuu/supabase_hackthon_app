@@ -73,10 +73,11 @@ class AppSelfIntroductionTextField extends StatelessWidget {
               const SizedBox(
                 width: 80,
                 child: Text(
-                  '自己紹介',
+                  'Self \n'
+                  'Introduction',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 12,
                   ),
                 ),
               ),
