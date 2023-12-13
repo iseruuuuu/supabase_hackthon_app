@@ -55,6 +55,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
+        surfaceTintColor: Colors.transparent,
       ),
       body: Stack(
         children: [
@@ -69,7 +70,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                       Padding(
                         padding: const EdgeInsets.all(10),
                         child: CircleAvatar(
-                          radius: 30,
+                          radius: 25,
                           backgroundColor: Colors.white,
                           child: Image.asset(widget.users.image),
                         ),
@@ -86,7 +87,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                           ),
                           Text(
                             '@${widget.users.userName}',
-                            style: TextStyle(fontSize: 15),
+                            style: TextStyle(fontSize: 13),
                           ),
                         ],
                       ),
@@ -207,6 +208,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                         size: 30,
                       ),
                     ),
+                    SizedBox(width: 5),
                     IconButton(
                       onPressed: () {
                         Share.share(
@@ -224,9 +226,9 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       child: Text(
-                        '$initialHeart NICE 👍 ',
+                        '$initialHeart 👍 ',
                         style: TextStyle(
-                          fontSize: 19,
+                          fontSize: 25,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -234,17 +236,18 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Text(
                     widget.posts.gadgetName,
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                   child: Row(
                     children: [
                       Text(
@@ -254,7 +257,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(width: 5),
+                      SizedBox(width: 10),
                       RatingBarIndicator(
                         rating: widget.posts.score.toDouble(),
                         itemBuilder: (context, index) => Icon(
@@ -267,7 +270,8 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                   child: Text(
                     widget.posts.comment,
                     style: TextStyle(
@@ -276,6 +280,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                     ),
                   ),
                 ),
+                SizedBox(height: 50),
               ],
             ),
           ),
