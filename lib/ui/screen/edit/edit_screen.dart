@@ -21,6 +21,7 @@ class EditScreen extends ConsumerWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
           actions: [
             TextButton(
               onPressed: loading
