@@ -65,8 +65,8 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                         borderRadius: BorderRadius.circular(5),
                         border: Border.all(width: 2),
                       ),
-                      width: deviceWidth / 2,
-                      height: deviceWidth / 2,
+                      width: deviceWidth / 1.5,
+                      height: deviceWidth / 1.5,
                       child: state.gadgetImage != ''
                           ? Image.file(
                               File(state.gadgetImage),
@@ -80,17 +80,35 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                     hintText: 'Gadget Name',
                     maxLines: 1,
                   ),
-                  RatingBar.builder(
-                    initialRating: 1,
-                    minRating: 1,
-                    itemPadding: EdgeInsets.symmetric(horizontal: 4),
-                    itemBuilder: (context, _) => Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    onRatingUpdate: (rating) => ref
-                        .read(postViewModelProvider().notifier)
-                        .updateScore(rating.toInt()),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 10,
+                          horizontal: 15,
+                        ),
+                        child: Text(
+                          'Score',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                      RatingBar.builder(
+                        initialRating: 1,
+                        minRating: 1,
+                        itemPadding: EdgeInsets.symmetric(horizontal: 15),
+                        itemBuilder: (context, _) => Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        onRatingUpdate: (rating) => ref
+                            .read(postViewModelProvider().notifier)
+                            .updateScore(rating.toInt()),
+                      ),
+                    ],
                   ),
                   AppPostTextField(
                     controller: controller.commentTextController,
