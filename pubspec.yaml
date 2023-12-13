@@ -50,10 +50,17 @@ flutter_icons:
 
 flutter_native_splash:
   color: "#ffffff"
-  android: true
-  ios: true
+#  android: true
+#  ios: true
   image: 'assets/splash/splash.png'
+  color_dark: "#ffffff"
+  image_dark: 'assets/splash/splash.png'
   fullscreen: true
+  android_12:
+    icon_background_color: "#ffffff"
+    image: 'assets/splash/splash_android12.png'
+    icon_background_color_dark: "#ffffff"
+    image_dark: 'assets/splash/splash_android12.png'
 
 flutter:
   uses-material-design: true
