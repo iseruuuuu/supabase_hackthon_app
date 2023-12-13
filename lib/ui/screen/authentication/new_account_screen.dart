@@ -21,7 +21,10 @@ class NewAccountScreen extends ConsumerWidget {
       onTap: () => primaryFocus?.unfocus(),
       child: Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(backgroundColor: Colors.white),
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
+        ),
         body: Stack(
           children: [
             SingleChildScrollView(

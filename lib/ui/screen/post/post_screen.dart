@@ -25,6 +25,7 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
         backgroundColor: Colors.white,
         appBar: AppBar(
           backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent,
           actions: [
             TextButton(
               onPressed: () {
