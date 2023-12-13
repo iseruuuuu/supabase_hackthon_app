@@ -43,8 +43,11 @@ class MyProfileScreen extends ConsumerWidget {
                 });
               },
               onTapShare: () {
-                //TODO あとで文言を考える
-                Share.share('aaa');
+                Share.share(
+                  'Hey I post my gadgets in GadgetGram\n'
+                  'Check post when you download!!\n'
+                  '#gadgetGram #supabasehackthon',
+                );
               },
             ),
             const SizedBox(height: 10),

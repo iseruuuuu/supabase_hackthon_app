@@ -214,7 +214,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                         Share.share(
                           'Posted a review about ${widget.posts.gadgetName}!'
                           '\nCheck out the details on GadgetGram!'
-                          '\n#gadgetGram',
+                          '\n#gadgetGram #supabasehackthon',
                         );
                       },
                       icon: Icon(
