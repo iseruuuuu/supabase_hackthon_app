@@ -103,6 +103,6 @@ class PostViewModel extends _$PostViewModel {
   }
 
   void updateScore(int score) {
-    state = state.copyWith(score: state.score);
+    state = state.copyWith(score: score);
   }
 }
