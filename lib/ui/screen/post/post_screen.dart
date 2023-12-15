@@ -36,7 +36,7 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                 });
               },
               child: const Text(
-                'POST',
+                'Tweet',
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
