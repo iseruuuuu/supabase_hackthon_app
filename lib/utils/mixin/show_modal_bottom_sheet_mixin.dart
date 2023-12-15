@@ -25,13 +25,34 @@ mixin ShowModalBottomSheetMixin {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
+                  child: SizedBox(
+                    width: MediaQuery.sizeOf(context).width,
+                    child: TextButton(
+                      onPressed: () {
+                        context.pop();
+                        camera();
+                      },
+                      child: Text(
+                        'カメラ',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: Colors.blue,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Divider(),
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width,
                   child: TextButton(
                     onPressed: () {
                       context.pop();
-                      camera();
+                      album();
                     },
                     child: Text(
-                      'カメラ',
+                      'アルバム',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -41,29 +62,17 @@ mixin ShowModalBottomSheetMixin {
                   ),
                 ),
                 Divider(),
-                TextButton(
-                  onPressed: () {
-                    context.pop();
-                    album();
-                  },
-                  child: Text(
-                    'アルバム',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ),
-                Divider(),
-                TextButton(
-                  onPressed: () => context.pop(),
-                  child: Text(
-                    '閉じる',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.red,
+                SizedBox(
+                  width: MediaQuery.sizeOf(context).width,
+                  child: TextButton(
+                    onPressed: () => context.pop(),
+                    child: Text(
+                      '閉じる',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.red,
+                      ),
                     ),
                   ),
                 ),
