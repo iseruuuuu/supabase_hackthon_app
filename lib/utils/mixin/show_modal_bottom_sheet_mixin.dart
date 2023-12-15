@@ -33,10 +33,10 @@ mixin ShowModalBottomSheetMixin {
                         camera();
                       },
                       child: Text(
-                        'カメラ',
+                        'CAMERA',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 16,
+                          fontSize: 18,
                           color: Colors.blue,
                         ),
                       ),
@@ -52,10 +52,10 @@ mixin ShowModalBottomSheetMixin {
                       album();
                     },
                     child: Text(
-                      'アルバム',
+                      'ALBUM',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 18,
                         color: Colors.blue,
                       ),
                     ),
@@ -67,10 +67,10 @@ mixin ShowModalBottomSheetMixin {
                   child: TextButton(
                     onPressed: () => context.pop(),
                     child: Text(
-                      '閉じる',
+                      'CLOSE',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 16,
+                        fontSize: 18,
                         color: Colors.red,
                       ),
                     ),
