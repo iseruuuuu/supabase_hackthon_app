@@ -12,7 +12,7 @@ mixin ShowModalBottomSheetMixin {
       context: context,
       builder: (context) {
         return Container(
-          height: MediaQuery.of(context).size.height / 4,
+          height: MediaQuery.of(context).size.height / 3,
           child: DecoratedBox(
             decoration: BoxDecoration(
               color: Colors.white,
