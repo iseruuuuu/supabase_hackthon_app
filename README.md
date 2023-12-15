@@ -1,4 +1,4 @@
-# gadget_gram_app
+# gadgetGram
 
 ![Group 87](https://github.com/iseruuuuu/supabase_hackthon_app/assets/67954894/523afa86-891f-4b8b-8ee2-5047007cfd49)
 
@@ -63,4 +63,4 @@ We would be happy if you could create a branch with the following rules
 
 Thank you for contributing!
 
-# gadget_gram_app
+# gadgetGram
