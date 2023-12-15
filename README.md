@@ -6,11 +6,16 @@
 
 
 # ダウンロードのリンクを記載する
+### iOS 
+We have released the app to the Apple Store Test flight and you can download it from this link
 
-- Apple Store
-  - https://github.com/iseruuuuu
-- Google Play Store
-  - https://github.com/iseruuuuu
+https://testflight.apple.com/join/FiieUQpj
+
+
+### Android
+
+Ready for submit
+
 
 ## Development Environment
 
