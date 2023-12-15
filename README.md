@@ -1,5 +1,17 @@
 # gadget_gram_app
 
+![Group 87](https://github.com/iseruuuuu/supabase_hackthon_app/assets/67954894/523afa86-891f-4b8b-8ee2-5047007cfd49)
+
+# 紹介を書く
+
+
+# ダウンロードのリンクを記載する
+
+- Apple Store
+  - https://github.com/iseruuuuu
+- Google Play Store
+  - https://github.com/iseruuuuu
+
 ## Development Environment
 
 ### Flutter
