@@ -61,7 +61,9 @@ class PostViewModel extends _$PostViewModel {
       return state.isSuccess;
     } else {
       loading.state = false;
-      state = state.copyWith(status: 'Anything is Empty');
+      state = state.copyWith(
+        status: 'Your post lacks the necessary information',
+      );
       return false;
     }
   }

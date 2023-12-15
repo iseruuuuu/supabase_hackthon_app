@@ -120,7 +120,7 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                     state.status,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 17,
+                      fontSize: 15,
                     ),
                   ),
                 ],
