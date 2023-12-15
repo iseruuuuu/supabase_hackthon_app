@@ -32,7 +32,7 @@ class SettingScreenState extends ConsumerState<SettingScreen>
           SettingsList(
             sections: [
               SettingsSection(
-                title: const Text('settings'),
+                title: const Text('Settings'),
                 tiles: <SettingsTile>[
                   SettingsTile.navigation(
                     leading: const Icon(
