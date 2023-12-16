@@ -8,9 +8,11 @@ import 'package:supabase_hackthon_app/ui/component/app_loading.dart';
 import 'package:supabase_hackthon_app/ui/component/app_post_text_field.dart';
 import 'package:supabase_hackthon_app/ui/screen/post/post_view_model.dart';
 import 'package:supabase_hackthon_app/utils/mixin/show_modal_bottom_sheet_mixin.dart';
+import 'package:supabase_hackthon_app/utils/mixin/snack_bar_mixin.dart';
 import 'package:supabase_hackthon_app/utils/provider/loading.dart';
 
-class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
+class PostScreen extends ConsumerWidget
+    with ShowModalBottomSheetMixin, SnackBarMixin {
   const PostScreen({super.key});
 
   @override
@@ -37,6 +39,9 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                       .then((value) {
                     if (value) {
                       context.pop(true);
+                    } else {
+                      //TODO 初回のステータスがでない💦
+                      openSnackBar(context, state.status);
                     }
                   });
                 },
@@ -122,13 +127,6 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                     controller: controller.commentTextController,
                     hintText: 'Comment',
                     maxLines: 7,
-                  ),
-                  Text(
-                    state.status,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                    ),
                   ),
                 ],
               ),

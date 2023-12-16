@@ -61,7 +61,7 @@ class EditViewModel extends _$EditViewModel {
       return true;
     } on PostgrestException catch (error) {
       logger.e(error.message);
-      state = state.copyWith(status: error.message);
+      state = state.copyWith(status: 'Error: Edit failed');
       return false;
     } finally {
       loading.state = false;

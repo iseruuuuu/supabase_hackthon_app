@@ -9,7 +9,7 @@ mixin SnackBarMixin {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
-            fontSize: 15,
+            fontSize: 14,
           ),
         ),
       ),

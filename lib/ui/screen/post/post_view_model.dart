@@ -53,7 +53,7 @@ class PostViewModel extends _$PostViewModel {
         },
         failure: (error) {
           state = state.copyWith(
-            status: 'Error has occurred.',
+            status: 'Error: Submission failed',
             isSuccess: false,
           );
         },
@@ -63,7 +63,7 @@ class PostViewModel extends _$PostViewModel {
     } else {
       loading.state = false;
       state = state.copyWith(
-        status: 'Your post lacks the necessary information',
+        status: 'Error: Your post lacks necessary information',
       );
       return false;
     }

@@ -5,9 +5,10 @@ import 'package:supabase_hackthon_app/ui/component/app_account_text_field.dart';
 import 'package:supabase_hackthon_app/ui/component/app_icon.dart';
 import 'package:supabase_hackthon_app/ui/component/app_loading.dart';
 import 'package:supabase_hackthon_app/ui/screen/edit/edit_view_model.dart';
+import 'package:supabase_hackthon_app/utils/mixin/snack_bar_mixin.dart';
 import 'package:supabase_hackthon_app/utils/provider/loading.dart';
 
-class EditScreen extends ConsumerWidget {
+class EditScreen extends ConsumerWidget with SnackBarMixin {
   const EditScreen({super.key});
 
   @override
@@ -32,6 +33,8 @@ class EditScreen extends ConsumerWidget {
                     .then((value) {
                   if (value) {
                     context.pop(true);
+                  } else {
+                    openSnackBar(context, state.status);
                   }
                 }),
                 child: Text(
@@ -91,7 +94,6 @@ class EditScreen extends ConsumerWidget {
                   AppSelfIntroductionTextField(
                     controller: controller.selfIntroduceTextController,
                   ),
-                  Text(state.status),
                 ],
               ),
             ),
