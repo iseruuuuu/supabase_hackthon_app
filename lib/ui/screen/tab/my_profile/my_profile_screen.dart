@@ -70,12 +70,18 @@ class MyProfileScreen extends ConsumerWidget {
                 );
               },
               loading: () {
-                return AppLoading(loading: true);
+                return AppLoading(
+                  loading: true,
+                  status: '',
+                );
               },
             ),
           ],
         ),
-        loading: () => AppLoading(loading: true),
+        loading: () => AppLoading(
+          loading: true,
+          status: '',
+        ),
         error: () => AppErrorWidget(
           onTap: () => ref.refresh(myPostStreamProvider),
         ),

@@ -287,7 +287,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
               ],
             ),
           ),
-          AppLoading(loading: loading),
+          AppLoading(loading: loading, status: ''),
         ],
       ),
     );

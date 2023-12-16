@@ -33,6 +33,7 @@ class PostViewModel extends _$PostViewModel {
   Future<bool> post() async {
     primaryFocus?.unfocus();
     loading.state = true;
+    state = state.copyWith(status: 'Loading...');
     if (gadgetTextController.text.isNotEmpty &&
         commentTextController.text.isNotEmpty) {
       final result = await ref.read(databaseServiceProvider).post(
@@ -45,7 +46,7 @@ class PostViewModel extends _$PostViewModel {
       await result.when(
         success: (_) async {
           state = state.copyWith(
-            status: 'Post has been made',
+            status: 'Success to post🎉',
             isSuccess: true,
           );
           await Future.delayed(Duration(seconds: 2));

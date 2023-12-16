@@ -32,7 +32,10 @@ class TimeLineScreen extends ConsumerWidget {
           );
         },
         loading: () {
-          return AppLoading(loading: true);
+          return AppLoading(
+            loading: true,
+            status: '',
+          );
         },
       ),
       floatingActionButton: AppFloatingButton(

@@ -95,7 +95,10 @@ class NewAccountScreen extends ConsumerWidget {
                 ],
               ),
             ),
-            AppLoading(loading: loading),
+            AppLoading(
+              loading: loading,
+              status: state.loginStatus,
+            ),
           ],
         ),
       ),

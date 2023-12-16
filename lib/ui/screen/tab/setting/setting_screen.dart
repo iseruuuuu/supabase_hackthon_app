@@ -121,7 +121,10 @@ class SettingScreenState extends ConsumerState<SettingScreen>
               leadingIconsColor: Colors.black,
             ),
           ),
-          AppLoading(loading: loading),
+          AppLoading(
+            loading: loading,
+            status: '',
+          ),
         ],
       ),
     );

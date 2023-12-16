@@ -133,7 +133,10 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
                 ],
               ),
             ),
-            AppLoading(loading: loading),
+            AppLoading(
+              loading: loading,
+              status: state.status,
+            ),
           ],
         ),
       ),

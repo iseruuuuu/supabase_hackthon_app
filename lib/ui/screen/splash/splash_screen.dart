@@ -32,7 +32,10 @@ class SplashScreenState extends State<SplashScreen> with AccountExistMixin {
     return const Scaffold(
       backgroundColor: Colors.white,
       body: Center(
-        child: AppLoading(loading: true),
+        child: AppLoading(
+          loading: true,
+          status: '',
+        ),
       ),
     );
   }

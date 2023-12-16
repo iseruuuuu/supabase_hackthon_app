@@ -29,7 +29,7 @@ class NewAccountViewModel extends _$NewAccountViewModel {
   }
 
   Future<bool> setUsers() async {
-    state = state.copyWith(loginStatus: '');
+    state = state.copyWith(loginStatus: 'Loading...');
     primaryFocus?.unfocus();
     loading.state = true;
     if (nameTextController.text.isNotEmpty &&
@@ -42,7 +42,7 @@ class NewAccountViewModel extends _$NewAccountViewModel {
       result.when(
         success: (_) {
           state = state.copyWith(
-            loginStatus: 'User created successfully!!',
+            loginStatus: 'Success to create user',
             isSuccess: true,
           );
         },
