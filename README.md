@@ -1,6 +1,7 @@
 # gadgetGram
 
-![Group 87](https://github.com/iseruuuuu/supabase_hackthon_app/assets/67954894/523afa86-891f-4b8b-8ee2-5047007cfd49)
+![Group 87](https://github.com/iseruuuuu/supabase_hackthon_app/assets/67954894/f4716133-0720-4ea1-9467-8e0d921351ea)
+
 
 # Introduce
 
