@@ -7,7 +7,7 @@ part of 'new_account_view_model.dart';
 // **************************************************************************
 
 String _$newAccountViewModelHash() =>
-    r'9c0ba71510483c31c78e38c7a0481f880234114a';
+    r'3afeeeaa03edcbbcab2052b775cb88ae3d262ae7';
 
 /// Copied from Dart SDK
 class _SystemHash {
