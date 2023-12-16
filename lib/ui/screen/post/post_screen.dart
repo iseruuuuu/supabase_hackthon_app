@@ -123,10 +123,9 @@ class PostScreen extends ConsumerWidget
                       ),
                     ],
                   ),
-                  AppPostTextField(
+                  AppPostCommentTextField(
                     controller: controller.commentTextController,
                     hintText: 'Comment',
-                    maxLines: 7,
                   ),
                 ],
               ),
