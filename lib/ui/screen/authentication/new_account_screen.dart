@@ -22,7 +22,7 @@ class NewAccountScreen extends ConsumerWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: !loading ? Colors.white : Colors.transparent,
           surfaceTintColor: Colors.transparent,
         ),
         body: Stack(

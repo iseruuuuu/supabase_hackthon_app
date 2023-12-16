@@ -24,26 +24,33 @@ class PostScreen extends ConsumerWidget with ShowModalBottomSheetMixin {
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.white,
           surfaceTintColor: Colors.transparent,
+          automaticallyImplyLeading: !loading,
+          backgroundColor: !loading ? Colors.white : Colors.transparent,
           actions: [
-            TextButton(
-              onPressed: () {
-                ref.read(postViewModelProvider().notifier).post().then((value) {
-                  if (value) {
-                    context.pop(true);
-                  }
-                });
-              },
-              child: const Text(
-                'Tweet',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.blue,
+            if (!loading)
+              TextButton(
+                onPressed: () {
+                  ref
+                      .read(postViewModelProvider().notifier)
+                      .post()
+                      .then((value) {
+                    if (value) {
+                      context.pop(true);
+                    }
+                  });
+                },
+                child: const Text(
+                  'Tweet',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue,
+                  ),
                 ),
-              ),
-            ),
+              )
+            else
+              SizedBox(),
           ],
         ),
         body: Stack(

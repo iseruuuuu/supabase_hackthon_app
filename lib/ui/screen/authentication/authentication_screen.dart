@@ -73,7 +73,7 @@ class AuthenticationScreenState extends ConsumerState<AuthenticationScreen>
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: !loading ? Colors.white : Colors.transparent,
         ),
         body: Stack(
           children: [

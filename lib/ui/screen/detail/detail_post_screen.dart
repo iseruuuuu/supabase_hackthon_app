@@ -54,8 +54,9 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: !loading ? Colors.white : Colors.transparent,
         surfaceTintColor: Colors.transparent,
+        automaticallyImplyLeading: !loading,
       ),
       body: Stack(
         children: [
@@ -107,7 +108,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                                           detailPostViewModelProvider()
                                               .notifier,
                                         )
-                                        .delete(widget.posts.id)
+                                        .delete(widget.posts)
                                         .then((value) async {
                                       if (value) {
                                         context.pop(true);
@@ -145,6 +146,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                   onDoubleTap: (widget.users.userId != user)
                       ? () async {
                           if (isHeart) {
+                            //TODO データのupdateができていない
                             await supabase.from('posts').update({
                               'heart': widget.posts.heart - 1,
                             }).match({'id': widget.posts.id});
@@ -153,6 +155,7 @@ class DetailPostScreenState extends ConsumerState<DetailPostScreen>
                               isHeart = false;
                             });
                           } else {
+                            //TODO データのupdateができていない
                             await supabase.from('posts').update({
                               'heart': widget.posts.heart + 1,
                             }).match({'id': widget.posts.id});

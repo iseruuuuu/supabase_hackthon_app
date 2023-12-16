@@ -22,27 +22,29 @@ class EditScreen extends ConsumerWidget {
         appBar: AppBar(
           backgroundColor: Colors.white,
           surfaceTintColor: Colors.transparent,
+          automaticallyImplyLeading: !loading,
           actions: [
-            TextButton(
-              onPressed: loading
-                  ? null
-                  : () => ref
-                          .read(editViewModelProvider().notifier)
-                          .update()
-                          .then((value) {
-                        if (value) {
-                          context.pop(true);
-                        }
-                      }),
-              child: Text(
-                'Update',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: loading ? Colors.grey : Colors.blueAccent,
+            if (!loading)
+              TextButton(
+                onPressed: () => ref
+                    .read(editViewModelProvider().notifier)
+                    .update()
+                    .then((value) {
+                  if (value) {
+                    context.pop(true);
+                  }
+                }),
+                child: Text(
+                  'Update',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: loading ? Colors.grey : Colors.blueAccent,
+                  ),
                 ),
-              ),
-            ),
+              )
+            else
+              SizedBox(),
           ],
         ),
         body: Stack(
