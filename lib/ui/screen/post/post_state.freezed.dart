@@ -122,7 +122,7 @@ class __$$PostStateImplCopyWithImpl<$Res>
 class _$PostStateImpl implements _PostState {
   const _$PostStateImpl(
       {this.gadgetImage = '',
-      this.status = 'Error: Your post lacks necessary information',
+      this.status = 'Unknown error occurred',
       this.isSuccess = false,
       this.score = 0});
 

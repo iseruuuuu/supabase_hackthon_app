@@ -6,7 +6,7 @@ part 'post_state.freezed.dart';
 class PostState with _$PostState {
   const factory PostState({
     @Default('') String gadgetImage,
-    @Default('Error: Your post lacks necessary information') String status,
+    @Default('Unknown error occurred') String status,
     @Default(false) isSuccess,
     @Default(0) score,
   }) = _PostState;
