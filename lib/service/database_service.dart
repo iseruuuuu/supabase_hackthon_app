@@ -3,6 +3,7 @@ import 'dart:typed_data';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:supabase_hackthon_app/main.dart';
+import 'package:supabase_hackthon_app/model/posts.dart';
 import 'package:supabase_hackthon_app/model/result.dart';
 
 part 'database_service.g.dart';
@@ -76,12 +77,17 @@ class DatabaseService {
         .uploadBinary('/$user/$uploadImage', imageBytes);
   }
 
-  Future<Result<void, Exception>> delete(int id) async {
+  Future<Result<void, Exception>> delete(Posts post) async {
     try {
-      await supabase.from('posts').delete().eq('id', id);
+      final deleteImage = post.gadgetImage.substring(1);
+      await supabase.storage.from('gadget').remove([deleteImage]);
+      await supabase.from('posts').delete().eq('id', post.id);
       return const Success(null);
     } on PostgrestException catch (error) {
       logger.e(error.message);
+      return Failure(error);
+    } on Exception catch (error) {
+      logger.e(error);
       return Failure(error);
     }
   }
