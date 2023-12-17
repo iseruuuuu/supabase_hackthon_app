@@ -5,8 +5,9 @@
 
 # Introduce
 
-This application is a social networking application that allows you to post gadgets that you are proud of, such as mice🖱️ and keyboards⌨️
-You can post pictures, names, reviews, and comments of your gadgets😚
+This is a social networking application that allows gadget enthusiasts to share their prized items.   
+Users can post photos, names, reviews, and comments of their favorite gadgets, such as mice🖱️ and keyboards⌨️.   
+Developed using Flutter, the iOS version is available in test flight😚  
 
 # download
 
@@ -18,7 +19,7 @@ https://testflight.apple.com/join/FiieUQpj
 
 ### Android
 
-Ready for submit
+waiting for review 😭
 
 
 ## Development Environment
