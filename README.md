@@ -9,6 +9,12 @@ This is a social networking application that allows gadget enthusiasts to share 
 Users can post photos, names, reviews, and comments of their favorite gadgets, such as mice🖱️ and keyboards⌨️.   
 Developed using Flutter, the iOS version is available in test flight😚  
 
+# Demo Video
+
+Please watch this video in Youtube.
+
+https://youtu.be/khpD8sAT9Os
+
 # download
 
 ### iOS 
