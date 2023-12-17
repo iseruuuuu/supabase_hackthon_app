@@ -25,6 +25,11 @@ waiting for review 😭
 
 https://github.com/iseruuuuu/supabase_hackthon_app/blob/main/APP_INFO.md
 
+# Load Map
+
+
+
+
 
 ## Development Environment
 
