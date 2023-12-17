@@ -21,6 +21,10 @@ https://testflight.apple.com/join/FiieUQpj
 
 waiting for review 😭
 
+# Specifics about the contents of the application
+
+https://github.com/iseruuuuu/supabase_hackthon_app/blob/main/APP_INFO.md
+
 
 ## Development Environment
 
